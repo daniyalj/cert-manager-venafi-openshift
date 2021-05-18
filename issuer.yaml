@@ -7,5 +7,5 @@ spec:
     zone: "certmanager\\cert-manager-it" # Set this to <Application Name>\<Issuing Template Alias>
     cloud:
       apiTokenSecretRef:
-        name: cloud-secret
+        name: venafi-cloud-secret
         key: apikey
