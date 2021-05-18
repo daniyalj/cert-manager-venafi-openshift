@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: weather-certificate
+spec:
+  secretName: weather-certificate
+  commonName: weather.apps.ocp.stackhack.ca
+  dnsNames:
+  - weather.apps.ocp.stackhack.ca
+  issuerRef:
+    name: venafi-cloud-issuer
