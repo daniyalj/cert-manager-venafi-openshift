@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: cloud-venafi-issuer
+spec:
+  venafi:
+    zone: "certmanager\\cert-manager-it" # Set this to <Application Name>\<Issuing Template Alias>
+    cloud:
+      apiTokenSecretRef:
+        name: cloud-secret
+        key: apikey
